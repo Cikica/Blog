@@ -1,0 +1,13 @@
+---
+layout: layout.html
+---
+
+{% for post in collections.post %}
+    <h2><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
+    <p>{{ post.content }}</p>
+{% endfor %}
+</hr>
+{% for principle in collections.principle %}
+    <h2><a href="{{ principle.url }}">{{ principle.data.title }}</a></h2>
+    <p>{{ principle.content }}</p>
+{% endfor %}
