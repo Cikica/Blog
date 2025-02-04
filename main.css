@@ -1,0 +1,54 @@
+:root {
+    --paper-0: #F8F8E5;
+    --ink-0: #02151E;
+    --ink-2: #112732;
+    --ink-4: #073043;
+
+    --font-overpass-mono: "Overpass Mono", serif;
+    --font-hammersmith-one: "Hammersmith One", serif;
+}
+
+body {
+    background-color: var(--paper-0);
+    display: flex;
+    justify-content: center;
+}
+
+.post {
+    width: 100%;
+    max-width: 800px;
+    padding-top: 73px;
+}
+
+.post__title {
+    font-family: var(--font-hammersmith-one);
+    font-size: 80px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    color: var(--ink-4);
+    padding-bottom: 67px;
+}
+
+.post__content {
+    font-family: var(--font-overpass-mono);
+    font-size: 22px;
+    line-height: 1.5;
+    color: var(--ink-0);
+    font-weight: 400;
+}
+
+.post__content p:first-child {
+    margin-top: 0;
+}
+
+.post__content p {
+    margin: 24px 0 15px;
+}
+
+.post__content ul {
+    margin: 0px 0px 50px;
+}
+
+.post__content li {
+    margin: 12px 0;
+}

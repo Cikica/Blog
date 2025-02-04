@@ -3,14 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Overpass+Mono:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/main.css">
+
+    <!-- TODO[C] Change title -->
     <title>Document</title>
 </head>
 <body>
-    <header>
-        {{ title }}
-    </header>
-    <main>
-        {{ content }}
-    </main>
+    <div class="post">
+        <header class="post__title">
+            {{ title }}
+        </header>
+        <main class="post__content">
+            {{ content }}
+        </main>
+    </div>
 </body>
 </html>
