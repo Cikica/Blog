@@ -1,17 +1,33 @@
 ---
-layout: layout.html
+layout: home.html
 ---
 
-Posts cat
-{% for post in collections.post %}
-    <h2><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
-    <p>{{ post.content }}</p>
-{% endfor %}
+<div class="post-preview-list">
+    <h3 class="post-preview-list__title">
+        Posts
+    </h3>
+    <div class="post-preview-list__content">
+        {% for post in collections.post %}
+            <div class="post-preview">
+                <h2 class="post-preview__title">{{ post.data.title }}</h2>
+                <p class="post-preview__body">{{ post.data.excerpt }}</p>
+                <a class="read-more-button" href="{{ post.url }}">Read more</a>
+            </div>
+        {% endfor %}
+    </div>
+</div>
 
-</hr>
-
-Principles sub
-{% for principle in collections.principle %}
-    <h2><a href="{{ principle.url }}">{{ principle.data.title }}</a></h2>
-    <p>{{ principle.content }}</p>
-{% endfor %}
+<div class="post-preview-list">
+    <h3 class="post-preview-list__title">
+        Principles
+    </h3>
+    <div class="post-preview-list__content">
+        {% for principle in collections.principle %}
+            <div class="post-preview">
+                <h2 class="post-preview__title">{{ principle.data.title }}</h2>
+                <p class="post-preview__body">{{ principle.data.excerpt }}</p>
+                <a class="read-more-button" href="{{ principle.url }}">Read more</a>
+            </div>
+        {% endfor %}
+    </div>
+</div>
