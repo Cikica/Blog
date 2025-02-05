@@ -5,3 +5,4 @@
 * `npx @11ty/eleventy --serve`: for running locally
 * `main.css`: keep all styles in
 * `layout.html`: is the entry html file
+* list cap = add limit filter for liquid (the templating language) then use it in an assign syntax, see index.html.
