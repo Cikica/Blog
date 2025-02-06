@@ -53,12 +53,20 @@ body {
     margin: 24px 0 15px;
 }
 
+.post__content p:last-child {
+    margin-bottom: 0;
+}
+
 .post__content ul {
     margin: 0px 0px 50px;
 }
 
 .post__content li {
     margin: 12px 0;
+}
+
+.post__navigation {
+    padding: 50px 0px 0px;
 }
 
 /* HOME PAGE */
