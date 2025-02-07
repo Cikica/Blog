@@ -13,14 +13,15 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="post">
-        <header class="post__title">
-            {{ title }}
-        </header>
-        <main class="post__content">
-            {{ content }}
-        </main>
-
+    <div class="page">
+        <div class="post">
+            <header class="post__title">
+                {{ title }}
+            </header>
+            <main class="post__content">
+                {{ content }}
+            </main>
+    
             {% assign nextPost = collections[tags] | getNextCollectionItem: page %}
             {% assign firstPost = collections[tags] | find: "order", "1" %}
             
@@ -31,13 +32,20 @@
                         <img class="read-more-button__icon" src="/assets/icons/right-arrow.svg" />
                     </a>                
                 {% else %}
-                    
                     <a class="read-more-button" href="{{ firstPost.url }}">
                         <span class="read-more-button__text">Next: {{ firstPost.data.title }}</span>
                         <img class="read-more-button__icon" src="/assets/icons/right-arrow.svg" />
                     </a>
                 {% endif %}
             </nav>
+        </div>
+        
+        <div class="footer">
+            <a class="footer__link" href="/">
+                Home
+            </a>
+        </div>
     </div>
+
 </body>
 </html>
