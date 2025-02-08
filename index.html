@@ -12,14 +12,14 @@ layout: home.html
         {% for post in posts %}
             <div class="post-preview">
                 <h2 class="post-preview__title">
-                    <a class="post-preview__title-link" href="{{ post.url }}">
+                    <a class="post-preview__title-link" href="{{ post.url | url }}">
                         {{ post.data.title }}
                     </a>
                 </h2>
                 <p class="post-preview__body">{{ post.data.excerpt }}</p>
-                <a class="read-more-button" href="{{ post.url }}">
+                <a class="read-more-button" href="{{ post.url | url }}">
                     <span class="read-more-button__text">Read more</span>
-                    <img class="read-more-button__icon" src="/assets/icons/right-arrow.svg" />
+                    <img class="read-more-button__icon" src="{{ '/assets/icons/right-arrow.svg' | url }}" />
                 </a>
             </div>
         {% endfor %}
@@ -36,14 +36,14 @@ layout: home.html
         {% for principle in principles %}
             <div class="post-preview">
                 <h2 class="post-preview__title">
-                    <a class="post-preview__title-link" href="{{ principle.url }}">
+                    <a class="post-preview__title-link" href="{{ principle.url | url }}">
                         {{ principle.data.title }}
                     </a>
                 </h2>
                 <p class="post-preview__body">{{ principle.data.excerpt }}</p>
-                <a class="read-more-button" href="{{ principle.url }}">
+                <a class="read-more-button" href="{{ principle.url | url }}">
                     <span class="read-more-button__text">Read more</span>
-                    <img class="read-more-button__icon" src="/assets/icons/right-arrow.svg" />
+                    <img class="read-more-button__icon" src="{{ '/assets/icons/right-arrow.svg' | url }}" />
                 </a>
             </div>
         {% endfor %}
