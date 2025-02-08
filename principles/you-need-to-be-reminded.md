@@ -1,6 +1,7 @@
 ---
 title: "You need to be reminded more than you need to be taught"
 excerpt: "This is my manual excerpt that will show in the list."
+order: "2"
 ---
 
 Knowledge is all the understanding accumulated throughout your life experience [so far].

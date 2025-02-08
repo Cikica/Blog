@@ -14,19 +14,31 @@
 </head>
 <body>
     <div class="page">
+        <!-- POST -->
         <div class="post">
             <header class="post__title">
                 {{ title }}
             </header>
+
+            {% assign category = tags[0] %}
+            <a href="/{{ category }}" class="category-button">
+                <div class="category-button__part">
+                    Part {{ order }}
+                </div>
+                <div class="category-button__name">
+                    of <b>{{ category | toTitleCase }}.</b>
+                </div>
+            </a>
+
             <main class="post__content">
                 {{ content }}
             </main>
     
-            {% assign nextPost = collections[tags] | getNextCollectionItem: page %}
-            {% assign firstPost = collections[tags] | find: "order", "1" %}
+            {% assign nextPost = collections[category] | getNextCollectionItem: page %}
+            {% assign firstPost = collections[category] | find: "order", "1" %}
             
             <nav class="post__navigation">
-                {% if nextPost %}
+                <!-- {% if nextPost %}
                     <a class="read-more-button" href="{{ nextPost.url }}">
                         <span class="read-more-button__text">Next: {{ nextPost.data.title }}</span>
                         <img class="read-more-button__icon" src="/assets/icons/right-arrow.svg" />
@@ -36,15 +48,16 @@
                         <span class="read-more-button__text">Next: {{ firstPost.data.title }}</span>
                         <img class="read-more-button__icon" src="/assets/icons/right-arrow.svg" />
                     </a>
-                {% endif %}
+                {% endif %} -->
             </nav>
         </div>
         
-        <div class="footer">
+        <!-- FOOTER -->
+        <!-- <div class="footer">
             <a class="footer__link" href="/">
                 Home
             </a>
-        </div>
+        </div> -->
     </div>
 
 </body>

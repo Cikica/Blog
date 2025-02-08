@@ -1,6 +1,7 @@
 ---
 title: "What is knowledge?"
 excerpt: "This is my manual excerpt that will show in the list."
+order: "1"
 ---
 
 **Properties of Knowledge**
