@@ -1,0 +1,26 @@
+---
+layout: category.html
+title: Principles
+description: "Core information about something"
+count: 5
+---
+
+<!-- PRINCIPLES -->
+<div class="post-preview-list">
+    <div class="post-preview-list__content">
+        {% for principle in collections.principles %}
+            <div class="post-preview">
+                <h2 class="post-preview__title">
+                    <a class="post-preview__title-link" href="{{ post.url }}">
+                        {{ principle.data.title }}
+                    </a>
+                </h2>
+                <p class="post-preview__body">{{ principle.data.excerpt }}</p>
+                <a class="read-more-button" href="{{ principle.url }}">
+                    <span class="read-more-button__text">Read more</span>
+                    <img class="read-more-button__icon" src="/assets/icons/right-arrow.svg" />
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+</div>

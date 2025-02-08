@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Overpass+Mono:wght@300..700&family=Sen:wght@400..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/main.css">
+
+    <!-- TODO[C] Change title -->
+    <title>Document</title>
+</head>
+<body>
+    <div class="page">
+        <!-- POST -->
+        <div class="post">
+            <header class="post__title">
+                {{ title }}
+            </header>
+
+            <!-- CATEGORY BUTTON -->
+            {% assign category = tags[0] %}
+            <a href="/{{ category }}" class="category-button">
+                <div class="category-button__part">
+                    Part {{ order }}
+                </div>
+                <div class="category-button__name">
+                    of <b>{{ category | toTitleCase }}.</b>
+                </div>
+            </a>
+
+            <!-- CONTENT -->
+            <main class="post__content">
+                {{ content }}
+            </main>
+
+            <!-- NEXT POST -->
+            {% assign nextPost = collections[category] | getNextPost: order %}
+            {% if nextPost %}
+                <nav class="post__navigation">
+                    <a class="read-more-button" href="{{ nextPost.url }}">
+                        <span class="read-more-button__text">Next: {{ nextPost.data.title }}</span>
+                        <img class="read-more-button__icon" src="/assets/icons/right-arrow.svg" />
+                    </a>
+                </nav>
+            {% endif %}
+        </div>
+        
+        <!-- FOOTER -->
+        <div class="footer">
+            <a class="footer__link" href="/">
+                Home
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>
