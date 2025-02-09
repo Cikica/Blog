@@ -8,9 +8,6 @@ module.exports = function(eleventyConfig) {
         let isLastPost = totalPosts === order;        
         let orderToFind = isLastPost ? 1 : order + 1;        
         let nextPost = collection.find((post) => {
-            console.log("- Visible order:", post.data.order)
-            console.log("- Sought order:", `${orderToFind}`)
-            console.log("-");
             return post.data.order === `${orderToFind}`;
         });
 
