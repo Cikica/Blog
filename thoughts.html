@@ -1,0 +1,25 @@
+---
+layout: category.html
+title: Thoughts
+description: "Jotting down thoughts and musings, that are valuable to me."
+---
+
+<!-- PRINCIPLES -->
+<div class="post-preview-list">
+    <div class="post-preview-list__content">
+        {% for thought in collections.thoughts %}
+            <div class="post-preview">
+                <h2 class="post-preview__title">
+                    <a class="post-preview__title-link" href="{{ thought.url | url }}">
+                        {{ thought.data.title }}
+                    </a>
+                </h2>
+                <p class="post-preview__body">{{ thought.data.excerpt }}</p>
+                <a class="read-more-button" href="{{ thought.url | url }}">
+                    <span class="read-more-button__text">Read more</span>
+                    <img class="read-more-button__icon" src="/assets/icons/right-arrow.svg" />
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+</div>

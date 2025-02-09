@@ -1,7 +1,7 @@
 ---
 layout: category.html
 title: Principles
-description: "A collection of principles (rule's of thumb), that I use to navigate the world."
+description: "A collection of principles (rule's of thumb), that I use to navigate the world. I consider this stuff to be observations of the underlying structure of reality."
 ---
 
 <!-- PRINCIPLES -->
@@ -10,12 +10,12 @@ description: "A collection of principles (rule's of thumb), that I use to naviga
         {% for principle in collections.principles %}
             <div class="post-preview">
                 <h2 class="post-preview__title">
-                    <a class="post-preview__title-link" href="{{ post.url }}">
+                    <a class="post-preview__title-link" href="{{ principle.url | url }}">
                         {{ principle.data.title }}
                     </a>
                 </h2>
                 <p class="post-preview__body">{{ principle.data.excerpt }}</p>
-                <a class="read-more-button" href="{{ principle.url }}">
+                <a class="read-more-button" href="{{ principle.url | url }}">
                     <span class="read-more-button__text">Read more</span>
                     <img class="read-more-button__icon" src="/assets/icons/right-arrow.svg" />
                 </a>

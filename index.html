@@ -2,30 +2,6 @@
 layout: home.html
 ---
 
-<!-- POSTS -->
-<div class="post-preview-list">
-    <h3 class="post-preview-list__title">
-        Posts
-    </h3>
-    <div class="post-preview-list__content">
-        {% assign posts = collections.posts | limit: 3 %}
-        {% for post in posts %}
-            <div class="post-preview">
-                <h2 class="post-preview__title">
-                    <a class="post-preview__title-link" href="{{ post.url | url }}">
-                        {{ post.data.title }}
-                    </a>
-                </h2>
-                <p class="post-preview__body">{{ post.data.excerpt }}</p>
-                <a class="read-more-button" href="{{ post.url | url }}">
-                    <span class="read-more-button__text">Read more</span>
-                    <img class="read-more-button__icon" src="{{ '/assets/icons/right-arrow.svg' | url }}" />
-                </a>
-            </div>
-        {% endfor %}
-    </div>
-</div>
-
 <!-- PRINCIPLES -->
 <div class="post-preview-list">
     <h3 class="post-preview-list__title">
@@ -44,6 +20,33 @@ layout: home.html
                 </h2>
                 <p class="post-preview__body">{{ principle.data.excerpt }}</p>
                 <a class="read-more-button" href="{{ principle.url | url }}">
+                    <span class="read-more-button__text">Read more</span>
+                    <img class="read-more-button__icon" src="{{ '/assets/icons/right-arrow.svg' | url }}" />
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+
+<!-- THOUGHTS -->
+<div class="post-preview-list">
+    <h3 class="post-preview-list__title">
+        <a class="post-preview-list__title-link" href="{{ '/thoughts' | url }}">
+            Thoughts
+        </a>
+    </h3>
+    <div class="post-preview-list__content">
+        {% assign thoughts = collections.thoughts | limit: 3 %}
+        {% for thought in thoughts %}
+            <div class="post-preview">
+                <h2 class="post-preview__title">
+                    <a class="post-preview__title-link" href="{{ thought.url | url }}">
+                        {{ thought.data.title }}
+                    </a>
+                </h2>
+                <p class="post-preview__body">{{ thought.data.excerpt }}</p>
+                <a class="read-more-button" href="{{ thought.url | url }}">
                     <span class="read-more-button__text">Read more</span>
                     <img class="read-more-button__icon" src="{{ '/assets/icons/right-arrow.svg' | url }}" />
                 </a>
