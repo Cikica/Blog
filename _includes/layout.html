@@ -22,7 +22,7 @@
 
             <!-- CATEGORY BUTTON -->
             {% assign category = tags[0] %}
-            <a href="/{{ category | url }}" class="category-button">
+            <a href="{{ '/' | append : category | url }}" class="category-button">
                 <div class="category-button__part">
                     Part {{ order }}
                 </div>

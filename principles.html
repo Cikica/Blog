@@ -17,7 +17,7 @@ description: "A collection of principles (rule's of thumb), that I use to naviga
                 <p class="post-preview__body">{{ principle.data.excerpt }}</p>
                 <a class="read-more-button" href="{{ principle.url | url }}">
                     <span class="read-more-button__text">Read more</span>
-                    <img class="read-more-button__icon" src="/assets/icons/right-arrow.svg" />
+                    <img class="read-more-button__icon" src="{{ '/assets/icons/right-arrow.svg' | url }}" />
                 </a>
             </div>
         {% endfor %}
