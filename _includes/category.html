@@ -17,18 +17,28 @@
 </head>
 
 <body>
-    <div class="home">
-        <header class="home__header">
-            <h1 class="home__title">
-                {{ title }}
-            </h1>
-            <div class="home__description">
-                {{ description }}
-            </div>
-        </header>
-        <main class="home__content">
-            {{ content }}
-        </main>
+    <div class="page">
+        <!-- CATEGORY -->
+        <div class="home">
+            <header class="home__header">
+                <h1 class="home__title">
+                    {{ title }}
+                </h1>
+                <div class="home__description">
+                    {{ description }}
+                </div>
+            </header>
+            <main class="home__content">
+                {{ content }}
+            </main>
+        </div>
+
+        <!-- FOOTER -->
+        <div class="footer footer--category">
+            <a class="footer__link" href="{{ '/' | url }}">
+                Home
+            </a>
+        </div>
     </div>
 </body>
 
