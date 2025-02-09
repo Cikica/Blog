@@ -29,7 +29,9 @@ layout: home.html
 <!-- PRINCIPLES -->
 <div class="post-preview-list">
     <h3 class="post-preview-list__title">
-        Principles
+        <a class="post-preview-list__title-link" href="{{ '/principles' | url }}">
+            Principles
+        </a>
     </h3>
     <div class="post-preview-list__content">
         {% assign principles = collections.principles | limit: 3 %}
