@@ -318,6 +318,15 @@ body {
     padding: 0;
 }
 
+.post-preview-list__title-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.post-preview-list__title-link:hover {
+    text-decoration: underline;
+}
+
 .post-preview-list__content {
     display: flex;
     flex-direction: column;
