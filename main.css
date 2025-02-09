@@ -201,13 +201,18 @@ body {
 }
 
 .page {
-
+    width: 100%;
+    max-width: 800px;
 }
 
 .footer {
     display: flex;
     justify-content: center;
     padding: 73px 0px 15px;
+}
+
+.footer--category {
+    max-width: 670px;
 }
 
 .footer__link {
@@ -275,7 +280,7 @@ body {
     }
 
     .home__header {
-        padding-bottom: 63px;
+        padding-bottom: 50px;
     }
 
     .home__title {
